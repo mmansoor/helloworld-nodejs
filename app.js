@@ -15,8 +15,8 @@ const server = http.createServer((req, res) => {
 
   res.write('<h1>Hello World</h1>');
   res.write('<br/>\n ' + os.hostname()+'\n');
+  res.write('<br/>Build #1000\n');
   res.end('</body></html>\n')
-
 
 
 });
