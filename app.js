@@ -2,8 +2,8 @@ const http = require('http');
 var request = require('request');
 var os = require( 'os' );
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const hostname = os.hostname();
+const port = 8081;
 
 const server = http.createServer((req, res) => {
   var networkInterfaces = os.networkInterfaces( );
@@ -14,13 +14,13 @@ const server = http.createServer((req, res) => {
   res.write('<html><head></head><bod>\n');
 
   res.write('<h1>Hello World</h1>');
-  res.write('<br/>\n ' + os.hostname());
-  res.end('</body></html>')
+  res.write('<br/>\n ' + os.hostname()+'\n');
+  res.end('</body></html>\n')
 
 
 
 });
 
-server.listen(port, hostname, () => {
+server.listen(port, os.hostname(), () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
