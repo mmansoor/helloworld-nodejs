@@ -1,5 +1,13 @@
-const http = require('http');
+var AWSXRay = require('aws-xray-sdk');
+AWSXRay.captureHTTPsGlobal(require('http'));
+
+AWSXRay.captureHTTPsGlobal(require('os'));
+
+
+var http = require('http');
+
 var request = require('request');
+
 var os = require( 'os' );
 
 const hostname = os.hostname();
