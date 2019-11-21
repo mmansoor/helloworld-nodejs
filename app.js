@@ -13,7 +13,7 @@ const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/html');
   res.write('<html><head></head><bod>\n');
 
-  res.write('<h1>Its''s a brand new day!</h1>');
+  res.write('<h1>It is a brand new day!</h1>');
   res.write('<br/>\n ' + os.hostname()+'\n');
   res.write('<br/>Build #1007 - PRD\n');
   res.end('</body></html>\n')
