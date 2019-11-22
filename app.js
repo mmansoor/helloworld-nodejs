@@ -1,4 +1,4 @@
-/*
+
 var AWSXRay = require('aws-xray-sdk');
 
 AWSXRay.captureHTTPsGlobal(require('http'));
@@ -6,7 +6,7 @@ AWSXRay.captureHTTPsGlobal(require('http'));
 AWSXRay.config([AWSXRay.plugins.EC2Plugin,AWSXRay.plugins.ElasticBeanstalkPlugin]);
 
 AWSXRay.captureHTTPsGlobal(require('os'));
-*/
+
 
 var http = require('http');
 
