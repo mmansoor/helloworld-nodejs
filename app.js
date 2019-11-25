@@ -7,6 +7,14 @@ AWSXRay.config([AWSXRay.plugins.EC2Plugin,AWSXRay.plugins.ElasticBeanstalkPlugin
 
 AWSXRay.captureHTTPsGlobal(require('os'));
 
+var rules = {
+  "rules": [ { "description": "Player moves.", "service_name": "*", "http_method": "*", "url_path": "/api/move/*", "fixed_target": 0, "rate": 0.05 } ],
+  "default": { "fixed_target": 1, "rate": 0.1 },
+  "version": 1
+  }
+
+AWSXRay.middleware.setSamplingRules(rules);
+
 
 var http = require('http');
 
