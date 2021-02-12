@@ -36,7 +36,7 @@ const server = http.createServer((req, res) => {
   res.write('<h1>Hello World</h1>');
   res.write('<h1>Happy New Year 2021</h1>');
   res.write('<br/>\n ' + os.hostname()+'\n');
-  res.write('<br/>Build #1008 - DEV Channel\n');
+  res.write('<br/>First Build from DEV Channel\n');
   res.end('</body></html>\n')
 
 
