@@ -8,9 +8,6 @@ hooks:
     - location: sbin/preinstall.sh
       timeout: 300
       runas: root
-    - location: sbin/preinstall.sh
-      timeout: 300
-      runas: root
   ApplicationStop:
     - location: sbin/stop_server.sh
       timeout: 300
