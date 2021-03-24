@@ -5,10 +5,10 @@ files:
     destination: /local/web/www
 hooks:
   BeforeInstall:
-    - location: sbin/preinstall.sh
+    - location: ./sbin/preinstall.sh
       runas: root
   AfterInstall:
-    - location: sbin/sitesetup.pl
+    - location: ./sbin/sitesetup.pl
       timeout: 300
       runas: root
   ApplicationStart:
