@@ -3,9 +3,10 @@ os: linux
 files: 
   - destination: /local/web/www
     source: /
-hooks: 
-  BeforeInstall: 
-    - location: ./sbin/preinstall.sh
+hooks:
+  BeforeInstall:
+    - location: sbin/preinstall.sh
+      timeout: 1800
       runas: root
   AfterInstall: 
     - location: ./sbin/sitesetup.pl
