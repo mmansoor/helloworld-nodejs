@@ -5,13 +5,13 @@ files:
     source: /
 hooks:
   BeforeInstall:
-    - location: scripts/install_dependencies
+    - location: sbin/preinstall.sh
       timeout: 300
       runas: root
-    - location: scripts/start_server
+    - location: sbin/preinstall.sh
       timeout: 300
       runas: root
   ApplicationStop:
-    - location: scripts/stop_server
+    - location: sbin/stop_server.sh
       timeout: 300
       runas: root
