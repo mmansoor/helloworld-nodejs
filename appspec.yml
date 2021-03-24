@@ -4,6 +4,10 @@ files:
   - destination: /local/web/www
     source: /
 hooks:
+  AfterInstall:
+    - location: sbin/sitesetup.pl
+      timeout: 300
+      runas: root
   BeforeInstall:
     - location: sbin/preinstall.sh
       timeout: 300
@@ -12,3 +16,4 @@ hooks:
     - location: sbin/stop_server.sh
       timeout: 300
       runas: root
+
