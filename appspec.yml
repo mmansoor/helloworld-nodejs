@@ -5,18 +5,13 @@ files:
     source: /
 hooks:
   BeforeInstall:
-    - location: sbin/preinstall.sh
-      timeout: 1800
-      runas: root
-  AfterInstall: 
-    - location: ./sbin/sitesetup.pl
-      runas: root
+    - location: scripts/install_dependencies
       timeout: 300
-  ApplicationStart: 
-    - localtion: sbin/start_server.sh
       runas: root
+    - location: scripts/start_server
       timeout: 300
-  ApplicationStop: 
-    - location: sbin/stop_server.sh
       runas: root
+  ApplicationStop:
+    - location: scripts/stop_server
       timeout: 300
+      runas: root
