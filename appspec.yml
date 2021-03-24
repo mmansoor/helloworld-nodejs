@@ -1,21 +1,21 @@
 version: 0.0
 os: linux
-files:
-  - source: /
-    destination: /local/web/www
-hooks:
-  BeforeInstall:
+files: 
+  - destination: /local/web/www
+    source: /
+hooks: 
+  BeforeInstall: 
     - location: ./sbin/preinstall.sh
       runas: root
-  AfterInstall:
+  AfterInstall: 
     - location: ./sbin/sitesetup.pl
-      timeout: 300
       runas: root
-  ApplicationStart:
+      timeout: 300
+  ApplicationStart: 
     - localtion: sbin/start_server.sh
-      timeout: 300
       runas: root
-  ApplicationStop:
+      timeout: 300
+  ApplicationStop: 
     - location: sbin/stop_server.sh
-      timeout: 300
       runas: root
+      timeout: 300
